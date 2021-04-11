@@ -5,9 +5,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 
 "****** AUTOCOMPLETE ******"
-Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -20,8 +19,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'thaerkh/vim-workspace'
 Plug 'easymotion/vim-easymotion'
+Plug 'gcmt/taboo.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'preservim/nerdcommenter'
+Plug 'mtth/scratch.vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 call plug#end()
 
@@ -47,6 +56,9 @@ set autoread
 set backupcopy=yes
 set breakindent
 set cursorline
+set completeopt+=menuone
+set completeopt+=noinsert
+set completeopt+=noselect
 set expandtab
 set exrc
 set hlsearch
@@ -88,12 +100,15 @@ set noswapfile
 
 autocmd filetype html,xml set listchars-=tab:>.
 
+let g:NERDTreeUseTCD=1
+let g:NERDTreeChDirMode=3
 let mapleader=" "
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 let g:sessions_dir = '~/.vim/sessions'
+let g:deoplete#enable_at_startup = 1
 
 nnoremap ; :
 nnoremap <silent> <Leader>b :Buffers<CR>
@@ -115,3 +130,5 @@ nmap <silent> <leader>rd :redraw!<CR>
 
 exec 'nnoremap <Leader>ss :mks! ' . g:sessions_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
 exec 'nnoremap <Leader>so :so ' . g:sessions_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
