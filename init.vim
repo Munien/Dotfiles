@@ -1,12 +1,13 @@
 call plug#begin()
 
 "****** THEMEING ******"
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'overcache/NeoSolarized'
 Plug 'vim-airline/vim-airline-themes'
 
 "****** AUTOCOMPLETE ******"
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -23,6 +24,8 @@ Plug 'gcmt/taboo.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'preservim/nerdcommenter'
 Plug 'mtth/scratch.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'troydm/zoomwintab.vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -41,11 +44,10 @@ endif
 "****** CONFIGURATION *******"
 filetype plugin indent on
 syntax enable
-set background=dark
-colorscheme palenight
-let g:airline_theme='palenight'
-" Italics for my favorite color scheme
-let g:palenight_terminal_italics=1
+colorscheme NeoSolarized
+set background=light
+let g:solarized_termcolors=256
+let g:airline_theme='solarized'
 set spell spelllang=en_au
 set termguicolors
 set laststatus=2
@@ -109,26 +111,32 @@ let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 let g:sessions_dir = '~/.vim/sessions'
 let g:deoplete#enable_at_startup = 1
+let g:EasyMotion_do_mapping = 0
+let g:incsearch#auto_nohlsearch = 1
 
 nnoremap ; :
-nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <Leader>. :Rg<CR>
-nnoremap <silent> <Leader>/ :BLines<CR>
-nnoremap <silent> <Leader>' :Marks<CR>
-nnoremap <silent> <Leader>g :Commits<CR>
-nnoremap <silent> <Leader>H :Helptags<CR>
-nnoremap <silent> <Leader>hh :History<CR>
-nnoremap <silent> <Leader>h: :History:<CR>
-nnoremap <silent> <Leader>h/ :History/<CR>
-nnoremap <silent> <Leader>.f :Files<CR>
-nnoremap <silent> <Leader>.fc :Files %:p:h<CR>
 nnoremap <silent> <Leader>sl :so ~/.vim/sessions/*.vim<C-D><CR>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> ,/ :nohlsearch<CR>
 nmap <silent> <leader>rd :redraw!<CR>
+nmap s <Plug>(easymotion-overwin-f2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+set hlsearch
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 exec 'nnoremap <Leader>ss :mks! ' . g:sessions_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
 exec 'nnoremap <Leader>so :so ' . g:sessions_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
-
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
