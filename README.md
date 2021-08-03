@@ -1,6 +1,9 @@
-# Personal NVim Setup
+# Personal Dotfiles
 
 # Requirements
 - Latest neovim (0.5)
-- Latest Alacritty
-- https://github.com/junegunn/vim-plug
+
+
+## Neovim
+### Install
+- Run :PackerInstall
