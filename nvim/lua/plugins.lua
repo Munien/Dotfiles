@@ -11,7 +11,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
-
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
@@ -20,9 +19,11 @@ return require('packer').startup(function()
 
   -- Fuzzy finder
   use {
-      'nvim-telescope/telescope.nvim',
-      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use { 'nvim-lua/plenary.nvim' }
 
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
@@ -52,9 +53,6 @@ return require('packer').startup(function()
 
   -- Vim sensible for nice defaults
   use { 'tpope/vim-sensible' }
-
-  -- For blankline lines
-  use { "lukas-reineke/indent-blankline.nvim" }
 
   -- Easymotion like functionality
   -- https://github.com/ggandor/lightspeed.nvim
