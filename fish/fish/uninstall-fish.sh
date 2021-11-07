@@ -1,4 +1,4 @@
-echo "Choose one of the supported distros/os"
+echo "Select your distro/os"
 echo "(1) ubuntu"
 echo "(2) debian"
 echo "(3) arch"
@@ -12,14 +12,12 @@ echo $selection
 
 case "$selection" in
   1 | 2)
-    sudo apt update && sudo apt install fish
+    sudo apt remove fish
     ;;
   3)
-    pacman -S fish
+    pacman -R fish
     ;;
   4)
-    brew install fish
+    brew uninstall fish
     ;;
 esac
-
-curl -L https://get.oh-my.fish | fish

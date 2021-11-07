@@ -29,7 +29,7 @@ return require('packer').startup(function()
   use { 'neovim/nvim-lspconfig' }
   use { 'hrsh7th/nvim-compe' }
 
-  use { 'kabouzeid/nvim-lspinstall' }
+  use { 'williamboman/nvim-lsp-installer' }
 
   -- Lua development
   use { 'tjdevries/nlua.nvim' }
@@ -47,9 +47,8 @@ return require('packer').startup(function()
   -- Vim surround to surround things
   use { 'tpope/vim-surround' }
 
-  -- Neogit for Git
-  -- https://github.com/TimUntersberger/neogit
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  -- Vim fugitive for Git
+  use { 'tpope/vim-fugitive' }
 
   -- Vim sensible for nice defaults
   use { 'tpope/vim-sensible' }

@@ -89,10 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/munien/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
   },
-  neogit = {
-    loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/neogit"
-  },
   ["nlua.nvim"] = {
     loaded = true,
     path = "/home/munien/.local/share/nvim/site/pack/packer/start/nlua.nvim"
@@ -133,6 +129,10 @@ _G.packer_plugins = {
   ["vim-dispatch"] = {
     loaded = true,
     path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-dispatch"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-javascript"] = {
     loaded = true,
