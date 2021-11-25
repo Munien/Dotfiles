@@ -4,7 +4,12 @@ local cmd = vim.cmd
 utils.opt('o', 'termguicolors', true)
 
 cmd 'colorscheme gruvbox-material'
+cmd 'filetype plugin indent on'
+cmd 'set guifont=Hack\\ Nerd\\ Font:h17'
 
+vim.api.nvim_set_var('neovide_transparency', 0.9)
+
+utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'laststatus', 2)
 utils.opt('o', 'encoding', 'UTF-8')
@@ -47,3 +52,14 @@ utils.opt('o', 'history', 1000)
 utils.opt('o', 'undolevels', 1000)
 utils.opt('o', 'wildignore', '*.swp,*.bak,*.pyc,*.class')
 utils.opt('o', 'visualbell', true)
+
+-- From settings
+
+utils.opt('o', 'completeopt', 'menuone,noselect')
+utils.opt('o', 'clipboard','unnamed,unnamedplus')
+utils.opt('w', 'relativenumber', true)
+utils.opt('o', 'wildmode', 'list:longest')
+utils.opt('o', 'shiftround', true)
+
+vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = true}'
+

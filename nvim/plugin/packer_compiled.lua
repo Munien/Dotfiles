@@ -71,88 +71,124 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Navigator.nvim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/Navigator.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/Navigator.nvim",
+    url = "https://github.com/numToStr/Navigator.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["incsearch.vim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/incsearch.vim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/incsearch.vim",
+    url = "https://github.com/haya14busa/incsearch.vim"
   },
   kommentary = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/kommentary",
+    url = "https://github.com/b3nj5m1n/kommentary"
   },
   ["lightspeed.nvim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["nlua.nvim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nlua.nvim",
+    url = "https://github.com/tjdevries/nlua.nvim"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/opt/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-dispatch"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-dispatch"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-dispatch",
+    url = "https://github.com/tpope/vim-dispatch"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-javascript"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-javascript"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-jsx-pretty"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-repeat"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-sensible"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-sensible"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-sensible",
+    url = "https://github.com/tpope/vim-sensible"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
+  ["workspace.vim"] = {
+    loaded = true,
+    path = "/home/munien/.local/share/nvim/site/pack/packer/start/workspace.vim",
+    url = "https://github.com/dosimple/workspace.vim"
   }
 }
 

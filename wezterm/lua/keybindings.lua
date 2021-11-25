@@ -16,6 +16,8 @@ cfg.keys = {
   {key="l", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Right"}},
   {key="x", mods="LEADER", action=wezterm.action{CloseCurrentPane={confirm=true}}},
   {key="Enter", mods="LEADER", action="TogglePaneZoomState"},
+  {key="[", mods="LEADER", action=wezterm.action{MoveTabRelative=-1}},
+  {key="]", mods="LEADER", action=wezterm.action{MoveTabRelative=1}},
 
   --- Keybindings for Tabs
   {key="t", mods="LEADER", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},

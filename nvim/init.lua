@@ -1,9 +1,6 @@
 -- Map leader to space
 vim.g.mapleader = ' '
 
--- Sensible defaults
--- require('settings')
-
 -- Key mappings
 require('keymappings')
 

@@ -23,7 +23,17 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Floating terminal
+  use { 'voldikss/vim-floaterm' }
+
+  -- Workspace functinality for buffers
+  use { 'dosimple/workspace.vim' }
+
+  -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
+
+  -- Multiline selection
+  use { 'mg979/vim-visual-multi' }
 
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }

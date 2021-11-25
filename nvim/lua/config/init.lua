@@ -1,5 +1,6 @@
 require('config.compe')
 require('config.fugitive')
+require('config.floaterm')
 require('config.tab-completion')
 require('config.telescope')
 require('config.nvimtree')

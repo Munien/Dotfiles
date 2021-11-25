@@ -1,3 +1,5 @@
+require'nvim-tree'.setup {}
+
 local utils = require('utils')
 
 utils.map('n', '<leader>.', ':NvimTreeToggle<CR>')
