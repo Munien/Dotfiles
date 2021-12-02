@@ -26,9 +26,6 @@ return require('packer').startup(function()
   -- Floating terminal
   use { 'voldikss/vim-floaterm' }
 
-  -- Workspace functinality for buffers
-  use { 'dosimple/workspace.vim' }
-
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
 
@@ -79,4 +76,8 @@ return require('packer').startup(function()
   -- Javascript syntax highlights
   use { 'pangloss/vim-javascript' }
   use { 'maxmellon/vim-jsx-pretty' }
+
+  -- Rails plugins
+  use { 'tpope/vim-bundler' }
+  use { 'tpope/vim-rails' }
 end)
