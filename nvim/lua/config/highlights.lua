@@ -1,4 +1,4 @@
-local function create_augroup(name, autocmds)
+--[[ local function create_augroup(name, autocmds)
     local cmd = vim.cmd
     cmd('augroup ' .. name)
     cmd('autocmd!')
@@ -9,7 +9,7 @@ local function create_augroup(name, autocmds)
 end
 
 local function hi(group, opts)
-	local c = "highlight " .. group
+	local c = "au ColorScheme highlight " .. group
 	for k, v in pairs(opts) do
 		c = c .. " " .. k .. "=" .. v
 	end
@@ -18,6 +18,7 @@ end
 
 function HighlightNone()
   hi("Normal", { ctermbg = "NONE", guibg = "NONE" })
+  hi("NormalNC", { ctermbg = "NONE", guibg = "NONE" })
 end
 
 function HighlightNr()
@@ -37,4 +38,4 @@ create_augroup("HighlightNone", {
   {"ColorScheme", "*", "lua HighlightNr()"},
   {"ColorScheme", "*", "lua HighlightSignColumn()"},
   {"ColorScheme", "*", "lua HighlightEndOfBuffer()"}
-})
+}) ]]

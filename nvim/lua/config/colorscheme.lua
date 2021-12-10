@@ -1,11 +1,18 @@
 local utils = require('utils')
 local cmd = vim.cmd
 
+-- Example config in Lua
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_transparent_sidebar = true
+vim.g.tokyonight_transparent = true
+
 utils.opt('o', 'termguicolors', true)
 
-cmd 'colorscheme gruvbox-material'
+cmd 'colorscheme tokyonight'
 cmd 'filetype plugin indent on'
 cmd 'set guifont=Hack\\ Nerd\\ Font:h17'
+cmd 'autocmd ColorScheme * hi Normal ctermbg=none'
 
 vim.api.nvim_set_var('neovide_transparency', 0.9)
 

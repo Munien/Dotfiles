@@ -89,3 +89,5 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
 end)
+
+require('lsp_lua.omnisharp')

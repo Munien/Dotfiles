@@ -15,7 +15,9 @@ local config = helper.combine_config(
   cfg_general,
   cfg_fonts,
   cfg_keybindings,
-  {}
+  {
+    color_scheme_dirs = {"/home/munien/.config/wezterm/colorschemes/"},
+  }
 )
 
 return config

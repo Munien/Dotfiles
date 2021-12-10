@@ -15,16 +15,13 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'sainnhe/gruvbox-material' }
+  use { 'folke/tokyonight.nvim' }
 
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  -- Floating terminal
-  use { 'voldikss/vim-floaterm' }
 
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
@@ -34,7 +31,10 @@ return require('packer').startup(function()
 
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
-  use { 'hrsh7th/nvim-compe' }
+  use { 'ms-jpq/coq_nvim', branch = 'coq' }
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p'}
+  use { 'nvim-treesitter/nvim-treesitter' }
 
   use { 'williamboman/nvim-lsp-installer' }
 
@@ -66,9 +66,6 @@ return require('packer').startup(function()
 
   -- Commentary plugin
   use { 'b3nj5m1n/kommentary' }
-
-  -- Navigator plugin that hooks into tmux
-  use { 'numToStr/Navigator.nvim' }
 
   -- Better search
   use { 'haya14busa/incsearch.vim' }
