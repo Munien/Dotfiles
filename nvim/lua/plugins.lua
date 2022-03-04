@@ -15,16 +15,14 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'sainnhe/gruvbox-material' }
+  use { 'navarasu/onedark.nvim' }
+  use { 'Shatur/neovim-ayu' }
 
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  -- Floating terminal
-  use { 'voldikss/vim-floaterm' }
 
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
@@ -34,12 +32,23 @@ return require('packer').startup(function()
 
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
-  use { 'hrsh7th/nvim-compe' }
-
   use { 'williamboman/nvim-lsp-installer' }
+  use { 'ms-jpq/coq_nvim', branch = 'coq' }
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
+  use { 'nvim-treesitter/nvim-treesitter' }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'tami5/lspsaga.nvim' }
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end
+  }
 
   -- Lua development
-  use { 'tjdevries/nlua.nvim' }
+  -- use { 'tjdevries/nlua.nvim' }
 
   -- Project drawer
   use { 'kyazdani42/nvim-web-devicons' }
@@ -55,29 +64,36 @@ return require('packer').startup(function()
   use { 'tpope/vim-surround' }
 
   -- Vim fugitive for Git
-  use { 'tpope/vim-fugitive' }
+  use { 'kdheepak/lazygit.nvim' }
 
   -- Vim sensible for nice defaults
   use { 'tpope/vim-sensible' }
 
   -- Easymotion like functionality
-  -- https://github.com/ggandor/lightspeed.nvim
-  use { 'ggandor/lightspeed.nvim' }
+  use { 'phaazon/hop.nvim' }
 
   -- Commentary plugin
   use { 'b3nj5m1n/kommentary' }
 
   -- Navigator plugin that hooks into tmux
-  use { 'numToStr/Navigator.nvim' }
+  -- use { 'numToStr/Navigator.nvim' }
 
   -- Better search
   use { 'haya14busa/incsearch.vim' }
 
   -- Javascript syntax highlights
-  use { 'pangloss/vim-javascript' }
-  use { 'maxmellon/vim-jsx-pretty' }
+  --[[ use { 'pangloss/vim-javascript' }
+  use { 'maxmellon/vim-jsx-pretty' } ]]
+
+  -- Visual
+  use { 'lukas-reineke/indent-blankline.nvim' }
+  use { 'folke/zen-mode.nvim' }
 
   -- Rails plugins
   use { 'tpope/vim-bundler' }
   use { 'tpope/vim-rails' }
+
+  -- QOL Plugins
+  use { 'chun-yang/auto-pairs' }
+  use { 'windwp/nvim-ts-autotag' }
 end)

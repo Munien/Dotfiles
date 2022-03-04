@@ -3,13 +3,15 @@ local cmd = vim.cmd
 
 utils.opt('o', 'termguicolors', true)
 
-cmd 'colorscheme gruvbox-material'
+require('ayu').setup({
+    mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+})
+
+require('ayu').colorscheme()
+
 cmd 'filetype plugin indent on'
-cmd 'set guifont=Hack\\ Nerd\\ Font:h17'
 
-vim.api.nvim_set_var('neovide_transparency', 0.9)
-
-utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'laststatus', 2)
 utils.opt('o', 'encoding', 'UTF-8')
@@ -52,12 +54,8 @@ utils.opt('o', 'history', 1000)
 utils.opt('o', 'undolevels', 1000)
 utils.opt('o', 'wildignore', '*.swp,*.bak,*.pyc,*.class')
 utils.opt('o', 'visualbell', true)
-
--- From settings
-
 utils.opt('o', 'completeopt', 'menuone,noselect')
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
-utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'wildmode', 'list:longest')
 utils.opt('o', 'shiftround', true)
 

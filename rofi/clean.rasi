@@ -1,6 +1,5 @@
 configuration {
     modi: "window,run,drun";
-    theme: "clean";
     font: "Hack Nerd Font 11";
 }
 
