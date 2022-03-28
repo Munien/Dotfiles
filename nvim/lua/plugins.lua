@@ -27,9 +27,6 @@ return require('packer').startup(function()
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
 
-  -- Multiline selection
-  use { 'mg979/vim-visual-multi' }
-
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
   use { 'williamboman/nvim-lsp-installer' }
@@ -96,4 +93,5 @@ return require('packer').startup(function()
   -- QOL Plugins
   use { 'chun-yang/auto-pairs' }
   use { 'windwp/nvim-ts-autotag' }
+  use { 'lewis6991/impatient.nvim' }
 end)

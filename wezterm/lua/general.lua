@@ -9,6 +9,6 @@ cfg.color_scheme = "Ayu Mirage"
 -- cfg.color_scheme = "Overnight Slumber"
 -- cfg.color_scheme = "Tinacious Design (Dark)"
 -- cfg.color_scheme = "Tomorrow Night Eighties"
-cfg.default_prog = {"/usr/bin/fish", "-l"}
+cfg.default_prog = {"/usr/local/bin/fish", "-l"}
 
 return cfg

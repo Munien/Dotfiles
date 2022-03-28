@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local cfg = {}
 
-cfg.font = wezterm.font("Source Code Pro")
-cfg.font_size = 13
+cfg.font = wezterm.font("SauceCodePro Nerd Font")
+cfg.font_size = 16
 
 return cfg

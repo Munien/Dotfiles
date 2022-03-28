@@ -21,3 +21,7 @@ utils.map('', '<leader><Down>', ':resize -1<CR>', { noremap = true, silent = tru
 utils.map('', '<leader><Up>', ':resize +1<CR>', { noremap = true, silent = true })
 utils.map('', '<leader><Right>', ':vertical resize -1<CR>', { noremap = true, silent = true })
 utils.map('', '<leader><Left>', ':vertical resize +1<CR>', { noremap = true, silent = true })
+
+-- TODO: Convert to lua
+vim.cmd("nnoremap <expr> n 'Nn'[v:searchforward]")
+vim.cmd("nnoremap <expr> N 'nN'[v:searchforward]")
