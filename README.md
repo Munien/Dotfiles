@@ -1,7 +1,7 @@
 # Personal Dotfiles
 
 # Requirements
-- Latest neovim (0.5)
+- Latest neovim (0.7)
 
 
 ## Neovim

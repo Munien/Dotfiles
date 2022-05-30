@@ -1,11 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CODE_DIR:/Users/dillonmunien/Code/Work
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/munien/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/munien/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/munien\x24
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fisher_edc_2F_bass_files:/home/munien/\x2econfig/fish/functions/__bass\x2epy\x1e/home/munien/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_z_files:/home/munien/\x2econfig/fish/functions/__z\x2efish\x1e/home/munien/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/munien/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/munien/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/munien/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/munien/\x2econfig/fish/functions/fisher\x2efish\x1e/home/munien/\x2econfig/fish/completions/fisher\x2efish
@@ -38,6 +39,7 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/lib/jvm/java\x2d16\x2dopenjdk/bin/
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/Users/dillonmunien/Code/Work/msi\x2dutils/bin\x1e/Users/dillonmunien/Scripts\x1e/opt/homebrew/opt/elasticsearch\x406/bin\x1e/opt/homebrew/opt/mongodb\x2dcommunity\x404\x2e0/bin\x1e/opt/homebrew/bin\x1e/usr/lib/jvm/java\x2d16\x2dopenjdk/bin/
 SETUVAR nvm_data:/home/munien/\x2elocal/share/nvm
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

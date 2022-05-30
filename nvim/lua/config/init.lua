@@ -1,7 +1,7 @@
 require('config.null-ls')
 require('config.tab-completion')
 require('config.telescope')
-require('config.nvimtree')
+require('config.chad-tree')
 require('config.colorscheme')
 require('config.highlights')
 require('config.lazygit')

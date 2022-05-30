@@ -37,3 +37,5 @@ lspconfig.tsserver.setup({
         client.resolved_capabilities.document_range_formatting = false
     end,
 })
+
+require'lspconfig'.sourcekit.setup{}

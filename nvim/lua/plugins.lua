@@ -49,7 +49,7 @@ return require('packer').startup(function()
 
   -- Project drawer
   use { 'kyazdani42/nvim-web-devicons' }
-  use { 'kyazdani42/nvim-tree.lua' }
+  use { 'ms-jpq/chadtree', branch = 'chad' }
 
   -- Vim dispatch
   use { 'tpope/vim-dispatch' }
@@ -72,15 +72,8 @@ return require('packer').startup(function()
   -- Commentary plugin
   use { 'b3nj5m1n/kommentary' }
 
-  -- Navigator plugin that hooks into tmux
-  -- use { 'numToStr/Navigator.nvim' }
-
   -- Better search
   use { 'haya14busa/incsearch.vim' }
-
-  -- Javascript syntax highlights
-  --[[ use { 'pangloss/vim-javascript' }
-  use { 'maxmellon/vim-jsx-pretty' } ]]
 
   -- Visual
   use { 'lukas-reineke/indent-blankline.nvim' }
