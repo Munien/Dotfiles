@@ -7,3 +7,5 @@
 ## Neovim
 ### Install
 - Run :PackerInstall
+- Run :COQdeps
+- Run :CHADdeps
