@@ -44,8 +44,17 @@ return require('packer').startup(function()
     end
   }
 
+  -- LSP for flutter/dart
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
+
   -- Lua development
   -- use { 'tjdevries/nlua.nvim' }
+
+  -- Debugging
+  use { 'mfussenegger/nvim-dap' }
+
+  -- Git Gutter
+  use { 'airblade/vim-gitgutter' }
 
   -- Project drawer
   use { 'kyazdani42/nvim-web-devicons' }
@@ -60,7 +69,7 @@ return require('packer').startup(function()
   -- Vim surround to surround things
   use { 'tpope/vim-surround' }
 
-  -- Vim fugitive for Git
+  -- Vim lazygit for Git
   use { 'kdheepak/lazygit.nvim' }
 
   -- Vim sensible for nice defaults
@@ -73,7 +82,7 @@ return require('packer').startup(function()
   use { 'b3nj5m1n/kommentary' }
 
   -- Better search
-  use { 'haya14busa/incsearch.vim' }
+  use { 'bronson/vim-visual-star-search' }
 
   -- Visual
   use { 'lukas-reineke/indent-blankline.nvim' }

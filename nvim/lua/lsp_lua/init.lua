@@ -39,3 +39,4 @@ lspconfig.tsserver.setup({
 })
 
 require'lspconfig'.sourcekit.setup{}
+require'lspconfig'.dartls.setup{}
