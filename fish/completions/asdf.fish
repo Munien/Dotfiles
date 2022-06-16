@@ -1,1 +1,0 @@
-/Users/dillonmunien/.asdf/completions/asdf.fish

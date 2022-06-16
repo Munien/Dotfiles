@@ -3,6 +3,7 @@ sh ./install-fish.sh
 
 
 # Install starship
+# Make the platform independant
 paru -S starship
 
 # Install fisher for plugin management for fish shell

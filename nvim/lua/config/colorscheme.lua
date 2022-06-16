@@ -3,13 +3,13 @@ local cmd = vim.cmd
 
 utils.opt('o', 'termguicolors', true)
 
-require('ayu').setup({
-    mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+vim.opt.guifont = { "SauceCodePro Nerd Font", ":h15" }
+
+require('rose-pine').setup({
+  dark_variant = 'moon'
 })
 
-require('ayu').colorscheme()
-
+cmd('colorscheme rose-pine')
 cmd 'filetype plugin indent on'
 
 utils.opt('o', 'cmdheight', 2)

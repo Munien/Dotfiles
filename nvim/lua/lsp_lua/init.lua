@@ -26,9 +26,7 @@ local on_attach = function(client, bufnr)
     buf_map(bufnr, "n", "]a", ":LspDiagNext<CR>")
     buf_map(bufnr, "n", "ga", ":LspCodeAction<CR>")
     buf_map(bufnr, "n", "<Leader>a", ":LspDiagLine<CR>")
-    buf_map(bufnr, "i", "<C-x><C-x>", "<cmd> LspSignatureHelp<CR>")    if client.resolved_capabilities.document_formatting then
-        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-    end
+    buf_map(bufnr, "i", "<C-x><C-x>", "<cmd> LspSignatureHelp<CR>") 
 end
 
 lspconfig.tsserver.setup({
@@ -40,3 +38,4 @@ lspconfig.tsserver.setup({
 
 require'lspconfig'.sourcekit.setup{}
 require'lspconfig'.dartls.setup{}
+require'lspconfig'.solargraph.setup{}

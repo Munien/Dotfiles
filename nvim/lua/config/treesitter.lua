@@ -4,10 +4,6 @@ require'nvim-treesitter.configs'.setup {
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
-  rainbow = {
-    enable = true,
-    colors = require('ayu').rainbow_colors
-  },
 
   -- List of parsers to ignore installing
   highlight = {

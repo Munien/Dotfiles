@@ -15,14 +15,18 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'navarasu/onedark.nvim' }
-  use { 'Shatur/neovim-ayu' }
+  use { 'rose-pine/neovim', as = 'rose-pine', tag = 'v1.*' }
 
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+  }
+  use { 'nvim-telescope/telescope-live-grep-args.nvim' }
 
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
@@ -53,15 +57,29 @@ return require('packer').startup(function()
   -- Debugging
   use { 'mfussenegger/nvim-dap' }
 
-  -- Git Gutter
-  use { 'airblade/vim-gitgutter' }
+  -- Git Signs
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- Project drawer
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'ms-jpq/chadtree', branch = 'chad' }
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
   -- Vim dispatch
   use { 'tpope/vim-dispatch' }
+
+  -- Bufferline for tabs
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Vim repeat to enhance . commands
   use { 'tpope/vim-repeat' }
@@ -96,4 +114,16 @@ return require('packer').startup(function()
   use { 'chun-yang/auto-pairs' }
   use { 'windwp/nvim-ts-autotag' }
   use { 'lewis6991/impatient.nvim' }
+
+  -- Projects / Workspaces
+  use { "ahmedkhalf/project.nvim" }
+
+  -- Displays a pop with suggestions on keybind
+  use { "folke/which-key.nvim" }
+  
+  -- Wrapper for terminal commands / QOL
+  use { 'kassio/neoterm' }
+
+  -- Test runner for vim
+  use { 'vim-test/vim-test' }
 end)
