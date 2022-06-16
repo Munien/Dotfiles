@@ -2,9 +2,7 @@
     link:
       relink: true
 
-- clean:
-  ~/.config:
-    recursive: true
+- clean: ['~']
 
 - link:
     ~/.config/nvim: nvim
