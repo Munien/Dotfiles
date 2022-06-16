@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+
+- clean:
+  ~/.config:
+    recursive: true
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.config/wezterm: wezterm
+    ~/.config/fish: fish
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

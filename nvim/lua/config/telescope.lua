@@ -1,7 +1,18 @@
 local utils = require('utils')
+local telescope = require("telescope")
+local wk = require("which-key")
 
-utils.map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
-utils.map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
-utils.map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
-utils.map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
-utils.map('n', '<leader>f.', '<cmd>Telescope file_browser<cr>')
+telescope.load_extension("projects")
+telescope.load_extension("fzf")
+telescope.load_extension("live_grep_args")
+
+wk.register({
+  f = {
+    name = "Telescope", -- optional group name
+    f = { "<cmd>Telescope find_files<cr>", "Find File" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
+    g = { "<cmd>Telescope live_grep_args<cr>", "Live Grep" },
+    h = { "<cmd>Telescope help_tags<cr>", "Show Help Tags" },
+  },
+},
+{ prefix = "<leader>" })

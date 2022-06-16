@@ -15,38 +15,71 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'sainnhe/gruvbox-material' }
+  use { 'rose-pine/neovim', as = 'rose-pine', tag = 'v1.*' }
 
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  -- Floating terminal
-  use { 'voldikss/vim-floaterm' }
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+  }
+  use { 'nvim-telescope/telescope-live-grep-args.nvim' }
 
   -- Helpful utilies for lua
   use { 'nvim-lua/plenary.nvim' }
 
-  -- Multiline selection
-  use { 'mg979/vim-visual-multi' }
-
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
-  use { 'hrsh7th/nvim-compe' }
-
   use { 'williamboman/nvim-lsp-installer' }
+  use { 'ms-jpq/coq_nvim', branch = 'coq' }
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
+  use { 'nvim-treesitter/nvim-treesitter' }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'tami5/lspsaga.nvim' }
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end
+  }
+
+  -- LSP for flutter/dart
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   -- Lua development
-  use { 'tjdevries/nlua.nvim' }
+  -- use { 'tjdevries/nlua.nvim' }
+
+  -- Debugging
+  use { 'mfussenegger/nvim-dap' }
+
+  -- Git Signs
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- Project drawer
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'kyazdani42/nvim-tree.lua' }
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
   -- Vim dispatch
   use { 'tpope/vim-dispatch' }
+
+  -- Bufferline for tabs
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Vim repeat to enhance . commands
   use { 'tpope/vim-repeat' }
@@ -54,30 +87,43 @@ return require('packer').startup(function()
   -- Vim surround to surround things
   use { 'tpope/vim-surround' }
 
-  -- Vim fugitive for Git
-  use { 'tpope/vim-fugitive' }
+  -- Vim lazygit for Git
+  use { 'kdheepak/lazygit.nvim' }
 
   -- Vim sensible for nice defaults
   use { 'tpope/vim-sensible' }
 
   -- Easymotion like functionality
-  -- https://github.com/ggandor/lightspeed.nvim
-  use { 'ggandor/lightspeed.nvim' }
+  use { 'phaazon/hop.nvim' }
 
   -- Commentary plugin
   use { 'b3nj5m1n/kommentary' }
 
-  -- Navigator plugin that hooks into tmux
-  use { 'numToStr/Navigator.nvim' }
-
   -- Better search
-  use { 'haya14busa/incsearch.vim' }
+  use { 'bronson/vim-visual-star-search' }
 
-  -- Javascript syntax highlights
-  use { 'pangloss/vim-javascript' }
-  use { 'maxmellon/vim-jsx-pretty' }
+  -- Visual
+  use { 'lukas-reineke/indent-blankline.nvim' }
+  use { 'folke/zen-mode.nvim' }
 
   -- Rails plugins
   use { 'tpope/vim-bundler' }
   use { 'tpope/vim-rails' }
+
+  -- QOL Plugins
+  use { 'chun-yang/auto-pairs' }
+  use { 'windwp/nvim-ts-autotag' }
+  use { 'lewis6991/impatient.nvim' }
+
+  -- Projects / Workspaces
+  use { "ahmedkhalf/project.nvim" }
+
+  -- Displays a pop with suggestions on keybind
+  use { "folke/which-key.nvim" }
+  
+  -- Wrapper for terminal commands / QOL
+  use { 'kassio/neoterm' }
+
+  -- Test runner for vim
+  use { 'vim-test/vim-test' }
 end)
