@@ -38,7 +38,17 @@ return require('packer').startup(function()
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'nvim-treesitter/nvim-treesitter' }
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
   use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'airblade/vim-rooter' }
   use { 'tami5/lspsaga.nvim' }
   use {
     "folke/trouble.nvim",
@@ -49,7 +59,10 @@ return require('packer').startup(function()
   }
 
   -- LSP for flutter/dart
-  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use {
+    'akinsho/flutter-tools.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   -- Lua development
   -- use { 'tjdevries/nlua.nvim' }

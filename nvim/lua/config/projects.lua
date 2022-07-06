@@ -6,6 +6,7 @@ wk.register({
     n = { "<cmd>tabnew<cr>", "New Tab" },
     f = { "<cmd>Telescope projects<cr>", "Find Projects" },
     k = { "<cmd>tabclose<cr>", "Close Tab" },
+    ["<tab>"] = { "<cmd>tabn<cr>", "Next Tab" },
     ["1"] = { "<cmd>tabn 1<cr>", "First Tab" },
     ["2"] = { "<cmd>tabn 2<cr>", "Second Tab" },
     ["3"] = { "<cmd>tabn 3<cr>", "Third Tab" },

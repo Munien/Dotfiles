@@ -1,9 +1,9 @@
 local utils = require('utils')
 local cmd = vim.cmd
+local set = vim.opt
 
-utils.opt('o', 'termguicolors', true)
-
-vim.opt.guifont = { "SauceCodePro Nerd Font", ":h15" }
+set.termguicolors = true
+set.guifont = 'SauceCodePro Nerd Font Mono:h15'
 
 require('rose-pine').setup({
   dark_variant = 'moon'
