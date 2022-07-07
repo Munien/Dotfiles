@@ -12,6 +12,6 @@ cfg.color_scheme = "Ayu Mirage"
 -- cfg.color_scheme = "Tomorrow Night Eighties"
 
 -- TODO: Find path to fish shell dynamically
-cfg.default_prog = {"/usr/local/bin/fish", "-l"}
+cfg.default_prog = {"/opt/homebrew/bin/fish", "-l"}
 
 return cfg

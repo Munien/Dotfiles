@@ -1,11 +1,11 @@
 -- Map leader to space
 vim.g.mapleader = ' '
 
--- Key mappings
-require('keymappings')
-
 -- Install plugins
 require('plugins')
+
+-- Key mappings
+require('keymappings')
 
 -- Setup Lua language server using submodule
 require('lsp_lua')

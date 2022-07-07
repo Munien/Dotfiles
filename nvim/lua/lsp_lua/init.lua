@@ -1,3 +1,5 @@
+require("nvim-lsp-installer").setup {}
+
 local lspconfig = require("lspconfig")
 
 local null_ls = require("null-ls")local buf_map = function(bufnr, mode, lhs, rhs, opts)
@@ -39,3 +41,4 @@ lspconfig.tsserver.setup({
 require'lspconfig'.sourcekit.setup{}
 require'lspconfig'.dartls.setup{}
 require'lspconfig'.solargraph.setup{}
+require'lspconfig'.vuels.setup{}

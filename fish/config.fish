@@ -1,7 +1,7 @@
 if status is-interactive
   starship init fish | source
 
-  source ~/.asdf/asdf.fish
+  source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
   set PATH /usr/local/m/current/bin $PATH
   set PATH /usr/lib/imagemagick6/bin $PATH
@@ -23,3 +23,4 @@ if status is-interactive
 # Generated for envman. Do not edit.
   test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 end
+
